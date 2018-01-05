@@ -1,0 +1,28 @@
+<mat-grid-list cols="2" rowHeight="fit" gutterSize="5px" class="grid" style="padding: 0px">
+  <mat-grid-tile class="grid-tile">
+    <mat-grid-tile-header class="grid-title" [style.background]="'#64B5F6'">
+      Who are we?
+      <div class="spacer"></div>
+      <a mat-raised-button color="primary" routerLink="/join">Join Us</a>
+    </mat-grid-tile-header>
+    <mat-card>
+      <img src="assets/startupphotos.jpg" height="10%" width="100%" class="grid-image">
+      <mat-card-content>
+        <p class="grid-text-1">We are team of passionate software engineers, developers and designers ready to help you in web developement and app developement with deployment in different cloud platorms.</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-grid-tile-header class="grid-title" [style.background]="'#64B5F6'">
+      What we can do for you?
+      <div class="spacer"></div>
+      <a mat-raised-button color="primary" routerLink="/">Know More</a>    
+    </mat-grid-tile-header>
+    <mat-card>
+      <img src="assets/whatwecando.jpeg" height="10%" width="100%" class="grid-image">
+      <mat-card-content>
+        <p class="grid-text-2">From development of websites, Progressive web apps, android apps to deploying them in different cloud providers like Heroku, Amazon Web Services, Microsoft Azure and maintainance of them. You concentrate on business and let us handle your tech needs.</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

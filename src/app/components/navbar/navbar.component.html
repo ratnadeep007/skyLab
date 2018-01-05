@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>
+      <a routerLink=".">SkyLab</a>
+    </span>
+    <span class="spacer"></span>
+    <div class="button-row">
+      <p *ngIf="showLikes" class="Slikes">{{numLikes}}</p>
+      <button mat-icon-button (click)="liked()" *ngIf="!showLikes">
+          <mat-icon>favorite</mat-icon>
+      </button>
+      <a mat-raised-button routerLink="about">About Us</a>
+      <a mat-raised-button routerLink="team">Our Team</a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

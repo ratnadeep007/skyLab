@@ -1,0 +1,29 @@
+<mat-card [style.box-shadow]="'3px 3px 3px 5px #311B92'">
+  <mat-card-header>
+    <h2>Join Us</h2>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <p>Provide your name and email ID. If you want me to give some advice you can(as new developer feedbacks are very helpful)</p>
+    <div class="form-container">
+      <form [formGroup]="rForms" (ngSubmit)="addDetails(rForms.value)">
+        <mat-form-field>
+          <input matInput name="" id="name" formControlName="name" placeholder="Name">
+        </mat-form-field>
+        <mat-error class="alert" *ngIf="!rForms.controls['name'].valid && rForms.controls['name'].touched">{{alert}}</mat-error>
+        <mat-form-field>
+          <input matInput type="text" name="" id="email" formControlName="email" placeholder="E-mail">
+        </mat-form-field>
+        <mat-error class="alert" *ngIf="!rForms.controls['email'].valid && rForms.controls['email'].touched">{{alert}}</mat-error>
+        <mat-form-field>
+          <input matInput type="text" name="" id="thingsYouKnow" formControlName="thingsYouKnow" placeholder="Things You Know (seperate by comma',')'">
+        </mat-form-field>
+        <mat-error class="alert" *ngIf="!rForms.controls['thingsYouKnow'].valid && rForms.controls['thingsYouKnow'].touched">{{alert}}</mat-error>
+        <mat-form-field>
+          <input matInput type="text" name="" id="advice" formControlName="advice" placeholder="Advice">
+        </mat-form-field>
+        <button mat-raised-button type="submit" color="primary">Submit</button>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>
